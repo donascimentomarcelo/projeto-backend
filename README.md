@@ -11,7 +11,7 @@
 
 ## Informações
 
-O projeto irá rodar por padrão na porta 8080.
+O projeto foi desenvolvido em Spring boot 2 e irá rodar por padrão na porta 8080.
 
 ## Endpoint
 
