@@ -60,7 +60,6 @@ public class ProjetoServiceImpl implements ProjetoService {
         } catch (Exception e) {
         	System.out.println(e);
         }
-        System.out.println(response.getBody());
 	}
 
 }
