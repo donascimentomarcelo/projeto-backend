@@ -9,7 +9,6 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -53,10 +52,8 @@ public class ProjetoServiceImpl implements ProjetoService {
 		headers.setContentType(MediaType.APPLICATION_JSON);
 		HttpEntity<Dto> request = new HttpEntity<Dto>(dto, headers);
 		RestTemplate restTemplate = new RestTemplate();
-    	
-        ResponseEntity<Dto> response = null;
         try {
-            response = restTemplate.exchange(URL, HttpMethod.POST, request, Dto.class);
+            restTemplate.exchange(URL, HttpMethod.POST, request, Dto.class);
         } catch (Exception e) {
         	System.out.println(e);
         }
